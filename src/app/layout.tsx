@@ -70,6 +70,15 @@ export default function RootLayout({
                 server call
               </Link>
             </li>
+            <li className="flex-shrink-0">
+              <Link
+                className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl inline-block w-full px-3 py-2 bg-sky-500 text-white rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 active:bg-sky-600 active:shadow-inner active:scale-100"
+                href="/livia
+                "
+              >
+                Photo Gallery
+              </Link>
+            </li>
           </ul>
         </nav>
         <div>{children}</div>
