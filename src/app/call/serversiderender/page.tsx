@@ -1,11 +1,14 @@
 import Link from 'next/link';
 
 const getRandomNumber = async () => {
-  const response = await fetch('http://localhost:3000/api/random', {
-    // ***** Default - cache: 'force-cache', *****
+  const response = await fetch(
+    'https://dev-hooley-next-app-demo-02.vercel.app/api/random',
+    {
+      // ***** Default - cache: 'force-cache', *****
 
-    cache: 'no-store',
-  });
+      cache: 'no-store',
+    }
+  );
   const data = await response.json();
   return data;
 };
@@ -40,4 +43,3 @@ export default async function SSR() {
     </div>
   );
 }
-
