@@ -8,7 +8,7 @@ export default function CSR() {
 
   const call = async () => {
     const response = await fetch(
-      'http://localhost:3000/api/random',
+      'https://dev-hooley-next-app-demo-02.vercel.app/api/random',
       // ***** Default - cache: 'no-store', *****
       {
         cache: 'no-store',
