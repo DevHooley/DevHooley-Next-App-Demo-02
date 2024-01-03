@@ -20,7 +20,17 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <main>Main page</main>;
+  return (
+    <main className="flex flex-col items-center justify-center h-full p-4 sm:p-8">
+      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center">
+        Welcome to CodingWithDevHooley.com
+      </h1>
+      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 text-center">
+        This is the main page of our application. Explore the following links to
+        navigate to different sections:
+      </p>
+    </main>
+  );
 }
 
 // *******THIS IS THE ORIGINAL CODE FROM THE TUTORIAL********

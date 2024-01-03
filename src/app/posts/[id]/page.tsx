@@ -78,10 +78,19 @@ export default async function PostID({ params }: any) {
   const { post } = await getPostById(params.id);
 
   return (
-    <main>
-      <h1>{post.title}</h1>
-      <p>{post.description}</p>
-    </main>
+    <div className="min-h-screen bg-gray-100">
+      <div className="flex p-8 pt-8 items-center justify-center bg-gray-100">
+        <main className="px-4 py-2 sm:px-8 sm:py-3 text-lg md:text-xl bg-white rounded-lg shadow-md">
+          <div className="flex flex-col items-center justify-between">
+            <h1 className="text-4xl text-gray-800 font-bold mb-4">
+              {post.title}
+            </h1>
+            <p className="text-gray-800 text-lg">{post.description}</p>
+            {/* Add more content related to the post here */}
+          </div>
+        </main>
+      </div>
+    </div>
   );
 }
 
