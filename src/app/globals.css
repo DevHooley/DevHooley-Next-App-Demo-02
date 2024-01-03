@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+ 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,3 +26,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* h1 {
+  @apply text-4xl font-bold;
+  font-family: 'Geologica', sans-serif;
+  font-family: 'Inclusive Sans', sans-serif;
+} */
