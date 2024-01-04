@@ -1,10 +1,15 @@
 'use client';
 
 import { userStore } from '@/store/user';
-import { stat } from 'fs';
 
 export default function Home() {
   const user = userStore((state: any) => state.user);
+  const updateUser = userStore((state: any) => state.updateUser);
+
+  const sub = userStore.subscribe(() => {
+    // trigger another function
+  });
+
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="flex p-8 pt-8 items-center justify-center  bg-gray-100">
@@ -12,9 +17,20 @@ export default function Home() {
           <h1 className="font-bold text-6xl text-purple-500 mb-6 text-center">
             Client Zustand
           </h1>
-          <h2 className="font-bold text-2xl mb-4 text-center text-gray-800">
-            {user.full_name}
-          </h2>
+          <div className="text-2xl mb-2 text-center text-gray-800">
+            <div className="font-bold text-4xl mb-2 text-center text-gray-800">
+              {user.full_name}
+            </div>
+            <input
+              className="text-xl border"
+              type="text"
+              onChange={(e: any) => {
+                updateUser({
+                  full_name: e.target.value,
+                });
+              }}
+            />
+          </div>
         </main>
       </div>
     </div>
