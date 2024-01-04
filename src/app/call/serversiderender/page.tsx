@@ -3,7 +3,6 @@ import Link from 'next/link';
 const getRandomNumber = async () => {
   const response = await fetch('http://localhost:3000/api/random', {
     // ***** Default - cache: 'force-cache', *****
-
     cache: 'no-store',
   });
   const data = await response.json();

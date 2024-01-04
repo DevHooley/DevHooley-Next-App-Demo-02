@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'sonner';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -36,6 +37,7 @@ export default function CSR() {
             {num}
           </p>
           <ul className="flex items-center justify-center">
+            <div className="flex flex-col items-start space-y-4"></div>
             <li className="mr-4">
               <Link
                 className="inline-block px-6 py-3 bg-sky-500 text-white rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 active:bg-sky-600 active:shadow-inner active:scale-100"
@@ -46,6 +48,14 @@ export default function CSR() {
             </li>
             {/* Add more navigation links if needed */}
           </ul>
+          <div className="p-2 flex items-center justify-center">
+            <button
+              onClick={() => toast.success('Success!')}
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl inline-block px-3 py-2 bg-amber-500 text-white rounded-md shadow-md hover:shadow-lg transform hover:scale-105  transition-transform duration-300 active:bg-amber-600 active:shadow-inner active:scale-100"
+            >
+              Notify me!
+            </button>
+          </div>
         </main>
       </div>
     </div>

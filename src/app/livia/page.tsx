@@ -25,16 +25,11 @@ export default function LiviaGallery() {
                   style={{ paddingBottom: '5%' }}
                 >
                   <Image
-                    alt="Livia Cycling"
                     src={image}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      width: '100%',
-                      borderRadius: '0.25rem',
-                    }}
                     width={500} // Set a fixed width (this can be adjusted based on your design)
                     height={250} // Set a fixed height (this can be adjusted based on your design)
+                    alt="Livia Cycling"
+                    style={{ width: '100%', borderRadius: '0.25rem' }}
                     className="rounded-lg"
                   />
                 </div>
