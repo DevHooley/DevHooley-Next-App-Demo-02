@@ -19,7 +19,10 @@ export default function LiviaGallery() {
           </h1>
           <div className="flex flex-wrap justify-center p-4 lg:p-8">
             {images.map((image: string, index: number) => (
-              <div key={index} className="w-full md:w-1/2 lg:w-1/3 p-2">
+              <div
+                key={index}
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:1/6 p-2"
+              >
                 <div
                   className="relative rounded-lg overflow-hidden"
                   style={{ paddingBottom: '5%' }}
