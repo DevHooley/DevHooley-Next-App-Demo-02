@@ -7,7 +7,7 @@ import { Toaster, toast } from 'sonner';
 import { AppWrapper } from '@/context';
 
 import './globals.css';
-import Navigation from '@/components/navigation/navigation';
+import Navigation from '@/components/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
