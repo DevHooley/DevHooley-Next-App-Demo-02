@@ -3,13 +3,15 @@
 import { toast } from 'sonner';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { getBaseUrl } from '@/utils/getBaseUrl';
 
 export default function CSR() {
   const [num, setNum] = useState(null);
 
   const call = async () => {
+    const base = getBaseUrl();
     const response = await fetch(
-      '/api/random',
+      `${base}/api/random`,
       // ***** Default - cache: 'no-store', *****
       {
         cache: 'no-store',

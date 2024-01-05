@@ -1,11 +1,14 @@
+import { getBaseUrl } from '@/utils/getBaseUrl';
+
 export default function Form() {
   async function savePost(data: FormData) {
     'use server';
 
     const title = data.get('title');
     const description = data.get('description');
+    const base = getBaseUrl();
 
-    const response = await fetch('/api/posts', {
+    const response = await fetch(`${base}/api/posts`, {
       method: 'POST',
       body: JSON.stringify({
         title,

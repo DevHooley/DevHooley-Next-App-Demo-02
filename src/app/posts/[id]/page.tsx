@@ -1,5 +1,7 @@
 // ********************** 1st way **********************
 
+import { getBaseUrl } from '@/utils/getBaseUrl';
+
 // 'use client';
 
 // import { useEffect, useState } from 'react';
@@ -64,7 +66,8 @@
 // ********************** 2nd way **********************
 
 async function getPostById(postId: string) {
-  const response = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+  const base = getBaseUrl();
+  const response = await fetch(`${base}/api/posts/${postId}`, {
     method: 'GET',
     next: {
       revalidate: 5000,

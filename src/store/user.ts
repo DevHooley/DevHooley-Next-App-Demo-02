@@ -1,3 +1,4 @@
+import { getBaseUrl } from '@/utils/getBaseUrl';
 import { create } from 'zustand';
 
 export const userStore = create((set) => ({
@@ -9,7 +10,8 @@ export const userStore = create((set) => ({
       user: { ...state.user, ...newUser },
     })),
   fetchUser: async () => {
-    const response = await fetch('/api/user');
+    const base = getBaseUrl();
+    const response = await fetch(`${base}/api/user`);
     const fetchUser = await response.json();
     set({ user: fetchUser });
   },

@@ -1,7 +1,9 @@
+import { getBaseUrl } from '@/utils/getBaseUrl';
 import Link from 'next/link';
 
 const getRandomNumber = async () => {
-  const response = await fetch('/api/random', {
+  const base = getBaseUrl();
+  const response = await fetch(`${base}/api/random`, {
     // ***** Default - cache: 'force-cache', *****
     cache: 'no-store',
   });
