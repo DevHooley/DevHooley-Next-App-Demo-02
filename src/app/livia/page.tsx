@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 
-const imageContext = require.context('../../../public/', false, /\.(jpeg)$/);
+const imageContext = require.context('../../../public/liviagallery', false, /\.(jpeg)$/);
 const images: string[] = imageContext
   .keys()
   .map((key: string) => imageContext(key));
@@ -32,8 +32,10 @@ export default function LiviaGallery() {
                     width={500} // Set a fixed width (this can be adjusted based on your design)
                     height={250} // Set a fixed height (this can be adjusted based on your design)
                     alt="Livia Cycling"
+                    priority={true}// Set priority to load the image as soon as possible
                     style={{ width: '100%', borderRadius: '0.25rem' }}
                     className="rounded-lg"
+
                   />
                 </div>
                 <p className="text-3xl font-bold text-center text-gray-800 mb-6"></p>
